@@ -23,6 +23,23 @@ def plot_snake(gameWindow,color,snake_list,snake_size):  #Defining Function to P
     for x,y in snake_list:
         pygame.draw.rect(gameWindow, color, [x, y, snake_size, snake_size])  #Creates Initial Snake in Game Window
 
+#Creating a Function of Welcome Screen
+def Welcome():
+    exit_game = False
+    while not exit_game:
+        gameWindow.fill(white)
+        text_screen("Welcome to Snakes Game", black, 350,250)
+        text_screen("Press Spacebar to Play", black, 350, 300)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                exit_game = True
+            if event.type == pygame.KEYDOWN:  # If you press Enter after the game is over we will reenter in the game
+                if event.key == pygame.K_SPACE:
+                    gameLoop()
+
+        pygame.display.update()
+        clock.tick(60)
+
 #Creating a Game Loop Function for writing whole game logic
 def gameLoop():
     #Game Specific Variable
@@ -57,7 +74,7 @@ def gameLoop():
                     exit_game = True
                 if event.type == pygame.KEYDOWN:   #If you press Enter after the game is over we will reenter in the game
                     if event.key == pygame.K_RETURN:
-                        gameLoop()
+                        Welcome()
 
         else:
             for event in pygame.event.get():  #Inner loop where the game handle all the events occurred in the Game Window
@@ -81,6 +98,9 @@ def gameLoop():
                     if event.key == pygame.K_DOWN:
                         velocity_y = init_velocity
                         velocity_x = 0
+
+                    if event.key == pygame.K_q:   #Generating Cheat Code for our game
+                        score += 5
 
             snake_x = snake_x + velocity_x   #This will move snake in  X axis with that velocity
             snake_y = snake_y + velocity_y   #This will move snake in  Y axis with that velocity
@@ -120,4 +140,4 @@ def gameLoop():
     pygame.quit()
     quit()
 
-gameLoop()
+Welcome()
