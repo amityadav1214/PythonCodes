@@ -1,0 +1,127 @@
+n=5
+#Creating Diamond Pattern
+for i in range(n-1):
+  for j in range(i,n):#Logic for Decresing Pattern
+    print(' ',end = '')
+  for j in range(i):#Logic for increasing pattern
+    print('*',end = '')
+  for j in range(i+1):#Logic for increasing pattern
+    print('*',end = '')
+  print()
+for i in range(n):
+  for j in range(i+1):
+    print(' ',end = '')
+  for j in range(i,n):
+    print('*',end = '')
+  for j in range(i+1,n):
+    print('*',end = '')
+  print()
+
+#Creating Pyramid Pattern
+for i in range(n):
+  for j in range(i,n):#Logic for Decresing Pattern
+    print(' ',end = '')
+  for j in range(i):#Logic for increasing pattern
+    print('*',end = '')
+  for j in range(i+1):#Logic for increasing pattern
+    print('*',end = '')
+  print()
+
+#Creating Reverse Pyramid Pattern
+for i in range(n):
+  for j in range(i+1):
+    print(' ',end = '')
+  for j in range(i,n):
+    print('*',end = '')
+  for j in range(i+1,n):
+    print('*',end = '')
+  print()
+
+#Creating Right Triangle Pattern
+for i in range(n):
+  for j in range(i+1):#Logic for increasing pattern
+    print('*',end = '')
+  print()
+
+#Creating Left Triangle Pattern
+for i in range(n):
+  for j in range(i,n):#Logic for Decresing Pattern
+    print(' ',end = '')
+  for j in range(i+1):#Logic for increasing pattern
+    print('*',end = '')
+  print()
+
+#Creating Right Downward Triangle Pattern
+for i in range(n):
+  for j in range(i,n):#Logic for Decresing Pattern
+    print('*',end = '')
+  for j in range(i+1):#Logic for increasing pattern
+    print(' ',end = '')
+  print()
+
+#Creating Left Downward Triangle Pattern
+for i in range(n):
+  for j in range(i+1):#Logic for increasing pattern
+    print(' ',end = '')
+  for j in range(i,n):#Logic for Decresing Pattern
+    print('*',end = '')
+  print()
+
+#Creating Double Hill Pattern
+#Wrong Code
+for i in range(n):
+  for j in range(i,n):#Logic for Decresing Pattern
+    print(' ',end = '')
+  for j in range(i+1):#Logic for increasing pattern
+    print('*',end = '')
+  for j in range(i+1,n):#Logic for Decreasing pattern
+    print(' ',end = '')
+  for j in range(i+1):#Logic for increasing pattern
+    print(' ',end = '')
+  for j in range(i+1):#Logic for increasing pattern
+    print('*',end = '')
+  print()
+
+#Left Pascal Triangle
+for i in range(n-1):
+  for j in range(i+1):#Logic for increasing pattern
+    print('*',end = '')
+  print()
+for i in range(n):
+  for j in range(i,n):#Logic for Decresing Pattern
+    print('*',end = '')
+  for j in range(i+1):#Logic for increasing pattern
+    print(' ',end = '')
+  print()
+
+#Right Pascal Triangle
+for i in range(n-1):
+  for j in range(i,n):#Logic for Decresing Pattern
+    print(' ',end = '')
+  for j in range(i+1):#Logic for increasing pattern
+    print('*',end = '')
+  print()
+for i in range(n):
+  for j in range(i+1):#Logic for increasing pattern
+    print(' ',end = '')
+  for j in range(i,n):#Logic for Decresing Pattern
+    print('*',end = '')
+  print()
+
+#Creating Sandglass Pattern
+for i in range(n-1):
+  for j in range(i+1):
+    print(' ',end = '')
+  for j in range(i,n):
+    print('*',end = '')
+  for j in range(i+1,n):
+    print('*',end = '')
+  print()
+for i in range(n):
+  for j in range(i,n):#Logic for Decresing Pattern
+    print(' ',end = '')
+  for j in range(i):#Logic for increasing pattern
+    print('*',end = '')
+  for j in range(i+1):#Logic for increasing pattern
+    print('*',end = '')
+  print()

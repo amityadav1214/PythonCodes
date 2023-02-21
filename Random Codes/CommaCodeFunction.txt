@@ -1,0 +1,15 @@
+#Defining a function which print all list values in one line with Comma Seperated and end with end before last List value.
+spam = ['Amit','Elephant','Sam','Kula']
+
+def commacode(things):
+    if len(things) >= 3:
+      for i in range(len(things) - 1):
+          print(things[i], end=', ')
+      print('and ' + things[-1])
+    elif len(things) == 1:
+      print(things[0])
+    elif len(things) == 2:
+      print(things[0]+' and '+things[1])
+    else:
+      print('List is empty')
+commacode(spam)
